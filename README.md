@@ -22,7 +22,6 @@ openjar-addons/ (repo)          ->  <game>/addons/openjar/ (submodule)
   docs/                         ->  markdown only, nothing to import
   tests/                        ->  skipped by the game (tests/.gdignore); holds the addon's own
                                     test project, see "Testing the addon"
-  handoff/                      ->  lane reports and shots, skipped by the game (.gdignore)
 ```
 
 Up to v0.1.0 the files sat under `addons/openjar/` inside this repo, which would have mounted as
