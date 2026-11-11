@@ -8,6 +8,10 @@ config_version=5
 config/name="openjar-addons tests"
 config/features=PackedStringArray("4.7")
 
+[autoload]
+
+Shots="*res://tools/shots.gd"
+
 [display]
 
 window/size/viewport_width=1920

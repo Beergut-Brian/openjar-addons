@@ -158,3 +158,24 @@ static func wants_split(was_split: bool, same_scene: bool, offset: Vector2, scre
 
 Split is always player 0 left, player 1 right, with a divider in the two players' colours. Each
 scene lives in its own world (own physics space), so two scenes never collide with each other.
+
+## Module: cutscene (`cutscene/`)
+
+`class_name CutscenePlayer extends Control`. Full contract (data format, host interface, API):
+`docs/cutscene-format.md`. The host interface there is the contract a game implements.
+
+## Module: PictoBubble (`picto_bubble/`)
+
+```gdscript
+class_name PictoBubble extends RefCounted     # static draw helpers, call from _draw()
+const CELL := 22.0; const PAD := 4.0
+const BUILTIN: Array[StringName]
+static func size_for(n: int, k := 1.0) -> Vector2
+static func draw(ci: CanvasItem, tip: Vector2, pics: Array, alpha := 1.0, k := 1.0) -> void
+static func picture(ci: CanvasItem, id: StringName, c: Vector2, s: float, a := 1.0) -> void
+static func texture_picture(ci: CanvasItem, tex: Texture2D, region: Rect2, c: Vector2, s: float, a := 1.0) -> void
+static func register(id: StringName, drawer: Callable) -> void          # drawer(ci, id, c, s, a)
+static func register_prefix(prefix: String, drawer: Callable) -> void
+static func has_picture(id: StringName) -> bool
+static func clear_registry() -> void
+```
