@@ -2,7 +2,8 @@
 
 Games pin a tag (`addons/openjar` submodule). Every change bumps the tag; `plugin.cfg` matches it.
 
-## Unreleased
+## 0.2.1
+
 
 ### `theme/` (first real asset; from the launcher)
 - `openjar_theme.tres`: the house UI theme, copied verbatim from openjar-launcher
